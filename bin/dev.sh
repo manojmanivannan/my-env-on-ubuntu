@@ -161,8 +161,8 @@ install_ohmyzsh(){
 		read choice;
 		choice=$(first_letter_lower $choice)
 		if [[ $choice == "y" ]]; then
-			sudo apt update && apt install zsh
-			sudo chsh -s $(which zsh)
+			sudo apt update && sudo apt install zsh #wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+			chsh -s $(which zsh)
 			zsh --version
 		fi
 	fi
